@@ -1,14 +1,17 @@
 - clean: []
 - shell:
-    - bash install.d/brew.sh
     - mkdir -p ~/.shellrc
     - mkdir -p ~/Downloads/Torrents
     - mkdir -p ~/Downloads/Chrome
     - mkdir -p ~/Downloads/Firefox
-    - mkdir -p ~/Downloads/Personal
+    - mkdir -p ~/Downloads/Personal/Development
     - mkdir -p ~/Downloads/Professional
-
-
+    - mkdir -p ~/Dropbox
+    - mkdir -p ~/Google\ Drive
+    - mkdir -p ~/.ssh
+    - bash install.d/00-brew.sh
+    - bash install.d/10-mac-softwareConfig.sh
+    - cp -rn .config ~/.config
     - cp bashrc ~/.bashrc
     - cp bash_profile ~/.bash_profile
 - link:
