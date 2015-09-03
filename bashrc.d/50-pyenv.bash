@@ -1,0 +1,1 @@
+pathprepend "$HOME/.pyenv/bin"

@@ -2,13 +2,11 @@
 
 ### Installation
 ```bash
-git clone https://github.com/TheDauthi/dotfiles.git ~/.shellrc/dotfiles
-bash ~/.shellrc/dotfiles/install
+git clone https://github.com/Juxtaposedwords/dotfiles.git ~/.shellrc/dotfiles
+bash ~/.shellrc/dotfiles/install.sh
 ```
 
 My dotfiles should work on OSX and linux.  They're based on a fairly bare-bones Ubuntu setup, as that's what I spend most of my time inside.  On OSX, I use [brew](http://brew.sh), and as much of the GNU userland as possible.  I use Bash 4, Bash Completion 2, and GNU find.  These will be installed if you are on OSX.
-
-On OSX, install [brew](http://brew.sh) first.
 
 I use [dotbot](https://github.com/anishathalye/dotbot) to manage my dotfiles, installing the repository itself into `.shellrc/dotfiles`.  I then symlink the directories into the .shellrc directory, which is what is actually included into PATH, and can even be loaded by other users.  The `.shellrc` may also have a `local.d` directory, which has machine-specific settings.
 

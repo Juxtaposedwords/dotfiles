@@ -59,6 +59,29 @@ brew cask install skype
 brew cask install u-torrent
 brew cask install firefox-aurora
 brew cask install sublime-text-3
+brew cask install keepassx
+brew cask install pycharm
+brew cask install slack
+brew cask install wireshark
+brew cask install adobe-reader
+brew cask install texshop
+brew cask install calibre
+brew cask install slack
+brew cask install race-for-the-galaxy
+brew install finch
+brew install pianobar
+brew install docker
+brew install tree
+brew install htop
+brew install terminal-notifier
+brew install git
+
+
+# Work stuff
+brew install rbenv
+brew install plenv
+brew install pyenv
+brew install net-snmp
 
 # Remove outdated versions from the cellar.
 brew cleanup

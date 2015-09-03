@@ -1,0 +1,3 @@
+user = splendeo@gmail.com
+password = 
+event_command = ~/.config/pianobar/eventcommand.sh

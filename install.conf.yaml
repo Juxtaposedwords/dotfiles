@@ -11,9 +11,9 @@
     - mkdir -p ~/.ssh
     - bash install.d/00-brew.sh
     - bash install.d/10-mac-softwareConfig.sh
-    - cp -rn .config ~/.config
-    - cp bashrc ~/.bashrc
-    - cp bash_profile ~/.bash_profile
+    - cp -rn homeConfigFiles/.config ~/.config
+    - cp homeConfigFiles/bashrc ~/.bashrc
+    - cp homeConfigFiles/bash_profile ~/.bash_profile
 - link:
     ~/.shellrc/bashrc.d: 
         create: true
@@ -21,4 +21,4 @@
     ~/.shellrc/bin:
         create: true
         path: bin
-    ~/.vimrc: vimrc
+    ~/.vimrc: homeConfigFiles/vimrc
