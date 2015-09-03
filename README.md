@@ -1,4 +1,4 @@
-# TheDauthi's dotfiles
+# JuxtaposedWords's dotfiles
 
 ### Installation
 ```bash
