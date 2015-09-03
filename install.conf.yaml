@@ -2,6 +2,13 @@
 - shell:
     - bash install.d/brew.sh
     - mkdir -p ~/.shellrc
+    - mkdir -p ~/Downloads/Torrents
+    - mkdir -p ~/Downloads/Chrome
+    - mkdir -p ~/Downloads/Firefox
+    - mkdir -p ~/Downloads/Personal
+    - mkdir -p ~/Downloads/Professional
+
+
     - cp bashrc ~/.bashrc
     - cp bash_profile ~/.bash_profile
 - link:
