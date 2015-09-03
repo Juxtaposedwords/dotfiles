@@ -14,6 +14,7 @@
     - cp -rn homeConfigFiles/.config ~/.config
     - cp homeConfigFiles/bashrc ~/.bashrc
     - cp homeConfigFiles/bash_profile ~/.bash_profile
+    - cp -rn homeConfigFiles/.ssh ~/.ssh
 - link:
     ~/.shellrc/bashrc.d: 
         create: true
