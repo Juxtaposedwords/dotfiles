@@ -2,7 +2,6 @@
 # Ignore if we're not on OSX
 [[ "$OSTYPE" =~ ^darwin ]] || exit 0
 
-
 # make sure we have xcode...homebrew requires
 xcode-select --install
 
