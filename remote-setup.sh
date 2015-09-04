@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -v
-if  ( test ! $(which git); )  && [[ "$OSTYPE" =~ ^darwin ]]; then
+if  [[ test ! $(which git); )]] && [[ "$OSTYPE" =~ ^darwin ]]; then
 # make sure we have xcode...homebrew requires
 xcode-select --install
 
@@ -26,8 +26,8 @@ if [ ! -d "$HOME/dotfiles/.git" ]; then
   cd $HOME/dotfiles
 else 
   cd $HOME/dotfiles
-#  git remote set-url origin https://github.com/Juxtaposedwords/dotfiles
-#  git reset --hard origin/master
+  git remote set-url origin https://github.com/Juxtaposedwords/dotfiles
+  git reset --hard origin/master
 fi
-# git pull origin master
+ git pull origin master
  bash install.sh

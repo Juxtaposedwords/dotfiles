@@ -1,4 +1,4 @@
-#!/bin/ bash
+#!/bin/bash
 # Ignore if we're not on OSX
 [[ "$OSTYPE" =~ ^darwin ]] || exit 0
 
@@ -36,3 +36,17 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Faster Dock
 defaults write com.apple.Dock autohide-delay -float 0.1
 defaults write com.apple.dock autohide-time-modifier -float 0.5
+
+# disable Natural scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Require password for login
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# ALPHA FEATURE, STILL NOT SURE OF IT?!
+# Power Settings for all Users (Display Sleep, Workstation Sleep, Wake for network access) (Pmset -a = All Power modes | Pmset -c = A/C Power | Pmset -b = Battery Power)
+pmset -a halfdim 1 gpuswitch 2 hibernatemode 0 lidwake 1 sms 1
+pmset -c sleep 0 displaysleep 30 disksleep 0 womp 1 networkoversleep 0 pmset -b sleep 30 displaysleep 15 disksleep 10
+
+
