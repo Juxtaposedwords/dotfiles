@@ -1,6 +1,11 @@
 #!/bin/bash
 set -ev
 
+for file in $HOME/dotfiles/install.d/*.sh; do
+  bash $file
+done
+
+
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 
@@ -12,6 +17,3 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
-for file in $HOME/dotfiles/install.d/*.sh; do
-  bash $file
-done
