@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -v
-if  [[ test ! $(which git); ]] && [[ "$OSTYPE" =~ ^darwin ]]; then
+if  [[ ( test ! $(which git); ) ]] && [[ "$OSTYPE" =~ ^darwin ]]; then
 # make sure we have xcode...homebrew requires
 xcode-select --install
 
