@@ -1,6 +1,7 @@
 #!/bin/bash
 set -v
-if  [ "$(command -v git > /dev/null 2>&1)"] && [[ "$OSTYPE" =~ ^darwin ]]; then
+
+if  ! $(hash git 2>/dev/null) && [[ "$OSTYPE" =~ ^darwin ]]; then
   # make sure we have xcode...so we can have a barebones git
   xcode-select --install
 
