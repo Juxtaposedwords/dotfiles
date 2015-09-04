@@ -9,8 +9,7 @@
     - mkdir -p ~/Dropbox
     - mkdir -p ~/Google\ Drive
     - mkdir -p ~/.ssh
-    - bash install.d/00-brew.sh
-    - bash install.d/10-mac-softwareConfig.sh
+    - bash install.d/*.sh
     - cp -rn homeConfigFiles/.config ~/.config
     - cp homeConfigFiles/bashrc ~/.bashrc
     - cp homeConfigFiles/bash_profile ~/.bash_profile
