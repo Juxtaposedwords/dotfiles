@@ -1,23 +1,14 @@
 #!/usr/bin/env bash
 set -v
 if  ! [ "$(type -P git &> /dev/null)"] && [[ "$OSTYPE" =~ ^darwin ]]; then
-# make sure we have xcode...homebrew requires
-xcode-select --install
+  # make sure we have xcode...so we can have a barebones git
+  xcode-select --install
 
-# Ask for the administrator password upfront.
-#  I've used this as a gating process 
-echo "Do not enter your password until xcode has finished. "
-sudo -v
+  # Ask for the administrator password upfront.
+  #  I've used this as a gating process 
+  echo "Do not enter your password until xcode has finished. "
+  sudo -v
 
-# Keep-alive: update existing sudo time stamp if set, otherwise do nothing.
-# while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-# if test ! $(which brew); then
-#   echo "Installing homebrew..."
-#   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# fi
-#   brew update
-#   brew install git
 elif  ( test ! $(which brew); ) &&  [ -f /etc/debian_version ]; then
   apt-get update
   apt-get install git -y
@@ -31,5 +22,5 @@ else
   git remote set-url origin https://github.com/Juxtaposedwords/dotfiles
   git reset --hard origin/master
 fi
- git pull origin master
- bash install.sh
+git pull origin master
+bash install.sh
