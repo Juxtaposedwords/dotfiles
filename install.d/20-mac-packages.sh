@@ -45,10 +45,18 @@ brew install bash-completion2
 brew install coreutils
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
+brew install findutils --with-default-names
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
+
+brew install gnu-indent --with-default-names
+brew install gnu-sed --with-default-names
+brew install gnutls --with-default-names
+brew install grep --with-default-names
+brew install gnu-tar --with-default-names
+brew install gnu-which --with-default-names
+brew install gawk
 
 
 # This will install all the stuff we need for reasons
@@ -66,14 +74,13 @@ brew cask install u-torrent
 brew cask install firefox-aurora
 brew cask install sublime-text-3
 brew cask install keepassx
+brew cask install caskroom/bomrewbrew-versions/java6
 brew cask install pycharm
 brew cask install slack
 brew cask install wireshark
 brew cask install adobe-reader
 brew cask install texshop
 brew cask install calibre
-brew cask install slack
-brew cask install race-for-the-galaxy
 brew install finch
 brew install pianobar
 brew install docker
@@ -81,6 +88,10 @@ brew install tree
 brew install htop
 brew install terminal-notifier
 brew install git
+brew install gnu-sed
+brew insatll gnu-grep
+brew insatll gnu-which
+brew install vim --override-system-vi
 
 
 # Work stuff
