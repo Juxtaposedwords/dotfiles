@@ -44,11 +44,14 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# ALPHA FEATURE, STILL NOT SURE OF IT?!
+
 # Power Settings for all Users (Display Sleep, Workstation Sleep, Wake for network access) (Pmset -a = All Power modes | Pmset -c = A/C Power | Pmset -b = Battery Power)
-sudo pmset -a halfdim 1 gpuswitch 2 darkwakes 0  disksleep 0hibernatemode 0 lidwake 1 sms 1 standbydelay 10800 ttyskeepawake 1 displaysleep 0 standby 1 acwake 0  lidwake 1
-sudo pmset -c standby 1 womp 1 halfdim 0 networkoversleep 0 disksleep 0 autopoweroff 1  
-#sudo pmset -c sleep 0 displaysleep 30 disksleep 0 womp 1 networkoversleep 0 ttyskeepawake 1
-#sudo pmset -b sleep 30 displaysleep 15 disksleep 10
+# to copy preferences in a less painful manner: "pmset -g" awk 1 ORS='' | tr -s ' ' > ~/FileToEdit (note: you will need to prune some of the output)
+# this will set up the battery settings
+sudo pmset -b standbydelay 10800 standby 1 halfdim 1 hibernatefile /var/vm/sleepimage darkwakes 0 disksleep 0 sleep 0 autopoweroffdelay 14400 hibernatemode 3 autopoweroff 1 ttyskeepawake 1 displaysleep 0
+
+# This will set up the ac power settings
+sudo pmset -a standbydelay 10800 standby 1 halfdim 1 darkwakes 0 disksleep 0 sleep 0 autopoweroffdelay 14400 hibernatemode 3 autopoweroff 1 ttyskeepawake 1 displaysleep 0 acwake 0 lidwake 1
+
 
 
