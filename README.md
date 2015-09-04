@@ -2,7 +2,7 @@
 
 ### Installation
 ```bash
-bash < ( curl -fsSL  https://raw.githubusercontent.com/Juxtaposedwords/dotfiles/master/remote-setup.sh)
+bash <( curl -fsSL  https://raw.githubusercontent.com/Juxtaposedwords/dotfiles/master/remote-setup.sh)
 ```
 This setup drastically differs from TheDauthi as I am setting up a machine for personal use.  I also perform the equivalent of juggling shotguns at some points (see curling into bash).
 
