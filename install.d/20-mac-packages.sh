@@ -2,8 +2,15 @@
 # Ignore if we're not on OSX
 [[ "$OSTYPE" =~ ^darwin ]] || exit 0
 
+# Keep-alive: update existing sudo time stamp if set, otherwise do nothing.
+ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # make sure we have xcode...homebrew requires
-xcode-select --install
+if test ! $(which brew); then
+   echo "Installing homebrew..."
+   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+   brew update
 
 # Ask for the administrator password upfront.
 sudo -v

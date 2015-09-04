@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 set -v
-if  [[ ( test ! $(which git); ) ]] && [[ "$OSTYPE" =~ ^darwin ]]; then
+if  ! [ "$(type -P git &> /dev/null)"] && [[ "$OSTYPE" =~ ^darwin ]]; then
 # make sure we have xcode...homebrew requires
 xcode-select --install
 
 # Ask for the administrator password upfront.
+#  I've used this as a gating process 
+echo "Do not enter your password until xcode has finished. "
 sudo -v
 
 # Keep-alive: update existing sudo time stamp if set, otherwise do nothing.

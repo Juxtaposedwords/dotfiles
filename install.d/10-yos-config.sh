@@ -46,7 +46,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # ALPHA FEATURE, STILL NOT SURE OF IT?!
 # Power Settings for all Users (Display Sleep, Workstation Sleep, Wake for network access) (Pmset -a = All Power modes | Pmset -c = A/C Power | Pmset -b = Battery Power)
-pmset -a halfdim 1 gpuswitch 2 hibernatemode 0 lidwake 1 sms 1
-pmset -c sleep 0 displaysleep 30 disksleep 0 womp 1 networkoversleep 0 pmset -b sleep 30 displaysleep 15 disksleep 10
+sudo pmset -a halfdim 1 gpuswitch 2 hibernatemode 0 lidwake 1 sms 1
+sudo pmset -c sleep 0 displaysleep 30 disksleep 0 womp 1 networkoversleep 0 pmset -b sleep 30 displaysleep 15 disksleep 10
 
 
