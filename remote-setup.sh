@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 set -v
 if  ! [ "$(type -P git &> /dev/null)"] && [[ "$OSTYPE" =~ ^darwin ]]; then
   # make sure we have xcode...so we can have a barebones git
