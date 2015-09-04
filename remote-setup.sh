@@ -1,6 +1,6 @@
 #!/bin/bash
 set -v
-if  ! [ "$(type -P git &> /dev/null)"] && [[ "$OSTYPE" =~ ^darwin ]]; then
+if  [ "$(command -v git > /dev/null 2>&1)"] && [[ "$OSTYPE" =~ ^darwin ]]; then
   # make sure we have xcode...so we can have a barebones git
   xcode-select --install
 
@@ -22,5 +22,6 @@ else
   git remote set-url origin https://github.com/Juxtaposedwords/dotfiles
   git reset --hard origin/master
 fi
+sudo -v
 git pull origin master
 bash install.sh
