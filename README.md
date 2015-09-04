@@ -2,9 +2,9 @@
 
 ### Installation
 ```bash
-git clone https://github.com/Juxtaposedwords/dotfiles.git ~/.shellrc/dotfiles
-bash ~/.shellrc/dotfiles/install.sh
+"$( curl fsSL  https://raw.githubusercontent.com/Juxtaposedwords/dotfiles/master/remote-setup.sh)
 ```
+This setup drastically differs from TheDauthi as I am setting up a machine for personal use.  I also perform the equivalent of juggling shotguns at some points (see curling into bash).
 
 My dotfiles should work on OSX and linux.  They're based on a fairly bare-bones Ubuntu setup, as that's what I spend most of my time inside.  On OSX, I use [brew](http://brew.sh), and as much of the GNU userland as possible.  I use Bash 4, Bash Completion 2, and GNU find.  These will be installed if you are on OSX.
 
