@@ -9,7 +9,6 @@
     - mkdir -p ~/Dropbox
     - mkdir -p ~/Google\ Drive
     - mkdir -p ~/.ssh
-    - bash install.d/*.sh
     - cp -rn homeConfigFiles/.config ~/.config
     - cp homeConfigFiles/bashrc ~/.bashrc
     - cp homeConfigFiles/bash_profile ~/.bash_profile
