@@ -74,13 +74,15 @@ brew cask install u-torrent
 brew cask install firefox-aurora
 brew cask install sublime-text-3
 brew cask install keepassx
-brew cask install caskroom/bomrewbrew-versions/java6
+brew cask install caskroom/homebrew-versions/java6
 brew cask install pycharm
 brew cask install slack
+brew cask install xquartz
 brew cask install wireshark
 brew cask install adobe-reader
 brew cask install texshop
 brew cask install calibre
+brew cask install silverlight
 brew install finch
 brew install pianobar
 brew install docker
@@ -88,9 +90,6 @@ brew install tree
 brew install htop
 brew install terminal-notifier
 brew install git
-brew install gnu-sed
-brew insatll gnu-grep
-brew insatll gnu-which
 brew install vim --override-system-vi
 
 
@@ -103,10 +102,6 @@ brew install net-snmp
 # Remove outdated versions from the cellar.
 brew cleanup
 
-# This enables shiftit in security preferences, no seriously it does.
-sudo sqlite3 "/Library/Application Support/com.apple.TCC/TCC.db" 'update access set allowed="1" where client like "%shiftit%";'
-
-
 
 LOCALBASH="/usr/local/bin/bash"
 if ! grep -q $LOCALBASH /etc/shells; then
@@ -116,5 +111,10 @@ fi
 
 # Move /usr/local/bin to the top of the path
 sudo sed -i '' '/^\/usr\/local\/bin/!H;//p;$!d;g;s/\n//' /etc/paths
+
+
+open ~/Applications/ShiftIt.app
+# This enables shiftit in security preferences, no seriously it does.
+sudo sqlite3 "/Library/Application Support/com.apple.TCC/TCC.db" 'update access set allowed="1" where client like "%shiftit%";'
 
 
