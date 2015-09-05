@@ -110,8 +110,7 @@ if ! grep -q $LOCALBASH /etc/shells; then
 fi
 
 # Move /usr/local/bin to the top of the path
-sudo sed -i '' '/^\/usr\/local\/bin/!H;//p;$!d;g;s/\n//' /etc/paths
-
+sudo sed -ie  '/^\/usr\/local\/bin/!H;//p;$!d;g;s/\n//' /etc/paths
 
 open ~/Applications/ShiftIt.app
 # This enables shiftit in security preferences, no seriously it does.
