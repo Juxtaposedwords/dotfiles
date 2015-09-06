@@ -67,7 +67,6 @@ brew cask install google-chrome-canary
 brew cask install dropbox
 brew cask install shiftit
 brew cask install viscosity
-brew cask install sublime-text
 brew cask install alfred
 brew cask install google-drive
 brew cask install skype
@@ -92,6 +91,8 @@ brew install htop
 brew install terminal-notifier
 brew install git
 brew install vim --override-system-vi
+brew install wget
+
 
 
 # Work stuff
@@ -104,7 +105,7 @@ brew install net-snmp
 brew cleanup
 
 
-LOCALBASH="/usr/local/bin/bash"
+LOCALBASH="/usr/local/bin/bash"∏
 if ! grep -q $LOCALBASH /etc/shells; then
   echo $LOCALBASH | sudo tee -a /etc/shells
   sudo chsh -s $LOCALBASH $USER
@@ -112,6 +113,11 @@ fi
 
 # Move /usr/local/bin to the top of the path
 sudo sed -ie  '/^\/usr\/local\/bin/!H;//p;$!d;g;s/\n//' /etc/paths
+
+# Configure our sublime to use the wbond package manager
+curl -o ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package https://sublime.wbond.net/Package%20Control.sublime-package
+$HOME/LIbrary/Application\ Support/Sublime\ Text\ 3/Packages
+
 
 
 open ~/Applications/ShiftIt.app
