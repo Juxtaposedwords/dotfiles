@@ -71,9 +71,9 @@ brew cask install sublime-text
 brew cask install alfred
 brew cask install google-drive
 brew cask install skype
-brew cask install u-torrent
+brew cask install utorrent
 brew cask install firefox-aurora
-brew cask install sublime-text-3
+brew cask install sublime-text3
 brew cask install keepassx
 brew cask install caskroom/homebrew-versions/java6
 brew cask install pycharm
