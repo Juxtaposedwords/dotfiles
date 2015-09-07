@@ -12,4 +12,3 @@ fi
 
 git config --global user.name $USERNAME
 git config --global user.email $EMAIL
-ssh-keygen -t rsa -b 4096 -C $EMAIL
