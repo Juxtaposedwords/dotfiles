@@ -1,0 +1,8 @@
+- link:
+    ~/.shellrc/bashrc.d: 
+        create: true
+        path: bashrc.d/
+    ~/.shellrc/bin:
+        create: true
+        path: bin
+    ~/.vimrc: vimrc
