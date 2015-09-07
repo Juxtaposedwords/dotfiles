@@ -1,8 +1,8 @@
 - link:
     ~/.shellrc/bashrc.d: 
         create: true
-        path: bashrc.d/
+        path: homeConfigFiles/bashrc.d/
     ~/.shellrc/bin:
         create: true
         path: bin
-    ~/.vimrc: vimrc
+    ~/.vimrc: homeConfigFiles/.vimrc
