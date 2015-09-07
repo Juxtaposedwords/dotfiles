@@ -1,6 +1,6 @@
-
+- clean: []
 - shell:
-	- mkdir -p $HOME/.shellrc
+    - mkdir -p ~/.shellrc
 - link:
     ~/.shellrc/bashrc.d: 
         create: true
