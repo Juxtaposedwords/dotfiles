@@ -10,22 +10,22 @@ if test ! $(which brew); then
    echo "Installing homebrew..."
    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
-   brew update
 
 # Ask for the administrator password upfront.
 sudo -v
 
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
-brew install homebrew/dupes/grep
 
-# Make sure we’re using the latest Homebrew.
-brew update
+
 
 # Upgrade any already-installed formulae.
 brew upgrade
 brew tap homebrew/versions
 brew tap caskroom/versions
+
+# Make sure we’re using the latest Homebrew.
+brew update
 
 # Let's get the latest bash
 brew install bash
@@ -44,9 +44,9 @@ brew install vim --override-system-vi
 brew install gnu-indent --with-default-names
 brew install gnu-sed --with-default-names
 brew install gnutls --with-default-names
-brew install grep --with-default-names
 brew install gnu-tar --with-default-names
 brew install gnu-which --with-default-names
+brew install grep --with-defualt-names
 brew install gawk
 brew install docker
 brew install tree
