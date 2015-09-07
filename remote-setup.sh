@@ -15,11 +15,11 @@ elif  ( test ! $(which brew); ) &&  [ -f /etc/debian_version ]; then
   apt-get install git -y
 fi
 
-if [ ! -d "$HOME/dotfiles/.git" ]; then
+if [ ! -d "$HOME/.dotfiles/.git" ]; then
   git clone https://github.com/juxtaposedwords/dotfiles $HOME/dotfiles
-  cd $HOME/dotfiles
+  cd $HOME/.dotfiles
 else 
-  cd $HOME/dotfiles
+  cd $HOME/.dotfiles
   git remote set-url origin https://github.com/Juxtaposedwords/dotfiles
   git reset --hard origin/master
 fi
