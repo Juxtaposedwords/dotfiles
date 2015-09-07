@@ -7,12 +7,12 @@ mkdir -p $HOME/Downloads/Personal/Development
 mkdir -p $HOME/Downloads/Professional
 mkdir -p $HOME/Dropbox
 mkdir -p $HOME/Google\ Drive
-mkdir -p $HOME/.ssh
-cp -rn homeConfigFiles/.config $HOME/.config
-#ln -s homeConfigFiles/bashrc $HOME/.bashrc
-#cp homeConfigFiles/bash_profile $HOME/.bash_profile
-cp -rn homeConfigFiles/.ssh $HOME/.ssh
-cp -r $HOME/github
-ln -s $HOME/.shellrc/bashrc.d $HOME/.dotfiles/.shellrc/bashrc.d
-ln -s $HOME/.shellrc/bin $HOME/.dotfiles/bin
-ln -s $HOME/.vimrc $HOME/homeConfigFiles/.vimrc
+mkdir -p $HOME/.shellrc
+cp -rn $HOME/homeConfigFiles/.config $HOME/.config
+cp  $HOME/.dotfiles/homeConfigFiles/bashrc $HOME/.bashrc
+cp  $HOME/.dotfiles/homeConfigFiles/bash_profile $HOME/.bash_profile
+cp -rn $HOME/homeConfigFiles/.ssh $HOME/.ssh
+cp  $HOME/.dotfiles/homeConfigFiles/.gitconfig $HOME/.gitconfig
+ln -s $HOME/.dotfiles/.shellrc/bashrc.d $HOME/.shellrc/bashrc.d 
+ln -s $HOME/.dotfiles/bin $HOME/.shellrc/bin 
+ln -s $HOME/.dotfiles/homeConfigFiles/.vimrc $HOME/.vimrc 
