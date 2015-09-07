@@ -1,6 +1,4 @@
 #!/bin/bash
-mkdir -p $HOME/.shellrc
-mkdir -p $HOME/Downloads/Torrents
 mkdir -p $HOME/Downloads/Torrents/Incomplete
 mkdir -p $HOME/Downloads/Torrents/Complete
 mkdir -p $HOME/Downloads/Chrome
