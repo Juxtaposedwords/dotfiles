@@ -1,0 +1,9 @@
+[user]
+	email = Juxtaposedwords@gmail.com
+	name = Maloy Wilkes
+[core]
+	editor = vim
+[github]
+	user = juxtaposedwords
+[color]
+	ui = true

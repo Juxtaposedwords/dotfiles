@@ -14,6 +14,17 @@ fi
 # Ask for the administrator password upfront.
 sudo -v
 
+brew doctor
+
+# Setup Homebrew Cask.
+brew tap caskroom/cask
+brew install brew-cask
+brew tap caskroom/versions
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap homebrew/services
+brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 
@@ -21,8 +32,6 @@ brew tap homebrew/dupes
 
 # Upgrade any already-installed formulae.
 brew upgrade
-brew tap homebrew/versions
-brew tap caskroom/versions
 
 # Make sure we’re using the latest Homebrew.
 brew update
