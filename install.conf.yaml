@@ -10,4 +10,4 @@
         path: bin
     ~/.vimrc: 
         create: true
-    	path: homeConfigFiles/vimrc
+        path: homeConfigFiles/vimrc
