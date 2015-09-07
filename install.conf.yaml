@@ -1,3 +1,6 @@
+
+- shell:
+	- mkdir -p $HOME/.shellrc
 - link:
     ~/.shellrc/bashrc.d: 
         create: true
