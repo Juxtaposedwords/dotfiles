@@ -15,15 +15,6 @@ fi
 # Ask for the administrator password upfront.
 sudo -v
 
-# Keep-alive: update existing sudo time stamp if set, otherwise do nothing.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-
-if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
@@ -48,9 +39,8 @@ brew install coreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils --with-default-names
 
-# Install more recent versions of some OS X tools.
+# Install more recent versions of some OS X tools and #JustSysAdminThings
 brew install vim --override-system-vi
-
 brew install gnu-indent --with-default-names
 brew install gnu-sed --with-default-names
 brew install gnutls --with-default-names
@@ -58,7 +48,15 @@ brew install grep --with-default-names
 brew install gnu-tar --with-default-names
 brew install gnu-which --with-default-names
 brew install gawk
+brew install docker
+brew install tree
+brew install htop
+brew install git
+brew install wget
 
+# Install some recreational stuff
+brew install terminal-notifier
+brew install pianobar
 
 # This will install all the stuff we need for reasons
 brew install caskroom/cask/brew-cask
@@ -83,15 +81,6 @@ brew cask install adobe-reader
 brew cask install texshop
 brew cask install calibre
 brew cask install silverlight
-brew install finch
-brew install pianobar
-brew install docker
-brew install tree
-brew install htop
-brew install terminal-notifier
-brew install git
-brew install vim --override-system-vi
-brew install wget
 
 
 
@@ -113,15 +102,3 @@ fi
 
 # Move /usr/local/bin to the top of the path
 sudo sed -ie  '/^\/usr\/local\/bin/!H;//p;$!d;g;s/\n//' /etc/paths
-
-# Configure our sublime to use the wbond package manager
-curl -o ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package https://sublime.wbond.net/Package%20Control.sublime-package
-$HOME/LIbrary/Application\ Support/Sublime\ Text\ 3/Packages
-
-
-
-open ~/Applications/ShiftIt.app
-# This enables shiftit in security preferences, no seriously it does.
-sudo sqlite3 "/Library/Application Support/com.apple.TCC/TCC.db" 'update access set allowed="1" where client like "%shiftit%";'
-
-
