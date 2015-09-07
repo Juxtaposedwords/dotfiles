@@ -8,7 +8,7 @@ mkdir -p $HOME/Downloads/Professional
 mkdir -p $HOME/Dropbox
 mkdir -p $HOME/Google\ Drive
 mkdir -p $HOME/.shellrc
-cp -rn $HOME/homeConfigFiles/.config $HOME/.config
+cp -rn $HOME/.dotfiles/homeConfigFiles/.config $HOME/.config
 cp  $HOME/.dotfiles/homeConfigFiles/bashrc $HOME/.bashrc
 cp  $HOME/.dotfiles/homeConfigFiles/bash_profile $HOME/.bash_profile
 cp -rn $HOME/homeConfigFiles/.ssh $HOME/.ssh
