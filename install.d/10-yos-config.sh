@@ -2,6 +2,10 @@
 # Ignore if we're not on OSX
 [[ "$OSTYPE" =~ ^darwin ]] || exit 0
 
+
+# A lot of these have been stolen from various guides
+# notable guides:
+# - https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 # Show only active apps on teh dock
 defaults write com.apple.dock static-only -bool TRUE; 
 killall Dock
@@ -159,4 +163,14 @@ sudo pmset -b standbydelay 10800 standby 1 halfdim 1 hibernatefile /var/vm/sleep
 sudo pmset -a standbydelay 10800 standby 1 halfdim 1 darkwakes 0 disksleep 0 sleep 0 autopoweroffdelay 14400 hibernatemode 3 autopoweroff 1 ttyskeepawake 1 displaysleep 0 acwake 0 lidwake 1
 
 
+###############################################################################
+# Set User Icon                                                               #
+###############################################################################
+USER_HOME="$HOME"
+PROFILE_PICTURE="https://pbs.twimg.com/profile_images/593907811811078144/Ayn86sDz.jpg"
+sudo dscl . delete $USER_HOME jpegphoto
+sudo dscl . delete $USER_HOME Picture
 
+# Pulls down the user icon and names it "login.png"
+curl -o "$USER_HOME/Pictures/login.png" "$PROFILE_PICTURE"
+sudo dscl . create "$USER_HOME" Picture "$USER_HOME/Pictures/login.png"
