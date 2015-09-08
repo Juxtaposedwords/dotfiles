@@ -68,7 +68,6 @@ brew install terminal-notifier
 brew install pianobar
 
 # This will install all the stuff we need for reasons
-brew install caskroom/cask/brew-cask
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install dropbox
