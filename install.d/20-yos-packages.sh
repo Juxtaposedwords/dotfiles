@@ -1,4 +1,4 @@
-#!/bin/ bash
+#!/bin/bash
 # Ignore if we're not on OSX
 [[ "$OSTYPE" =~ ^darwin ]] || exit 0
 
@@ -103,7 +103,7 @@ brew install net-snmp
 brew cleanup
 
 
-LOCALBASH="/usr/local/bin/bash"∏
+LOCALBASH="/usr/local/bin/bash"
 if ! grep -q $LOCALBASH /etc/shells; then
   echo $LOCALBASH | sudo tee -a /etc/shells
   sudo chsh -s $LOCALBASH $USER
