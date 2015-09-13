@@ -10,7 +10,7 @@
 mkdir -p ~/Downloads/Torrents/Complete
 defaults write org.m0k.transmission DownloadLocationConstant -bool true
 defaults write org.m0k.transmission DownloadChoice -string "Constant"
-defaults write org.m0k.transmission DownloadFolder -string "${HOME}//Downloads/Torrents/Complete"
+defaults write org.m0k.transmission DownloadFolder -string "${HOME}/Downloads/Torrents/Complete"
 
 # Use `~/Documents/Torrents/Incomplete` to store incomplete downloads
 mkdir -p ~/Downloads/Torrents/Incomplete
