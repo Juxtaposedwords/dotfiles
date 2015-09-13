@@ -10,5 +10,8 @@ if HOMEBREW_GITHUB_API_TOKEN != ""; then
 	export HOMEBREW_GITHUB_API_TOKEN
 fi
 
+sed -i "s/\(token\ =\ \).*/\1$HOMEBREW_GITHUB_API_TOKEN/" $HOME/.gitconfig
+
+
 git config --global user.name $USERNAME
 git config --global user.email $EMAIL
