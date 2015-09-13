@@ -8,5 +8,6 @@ read -e -p "Enter your ssh private key" SSH_PRIV
 if $SSH_PUB != "" && $SSH_PRIV != "" && ! [ -f $HOME/.ssh/id_rsa.pub] && ! [ -f $HOME/.ssh/id_rsa ; then
   echo $SSH_PUB > $HOME/.ssh/id_rsa.pub
   echo $SSH_PRIV > $HOME/.ssh/id_rsa
-
 fi
+#Make sure we have the defaults
+chmod 600 $HOME/.ssh/id_rsa*
