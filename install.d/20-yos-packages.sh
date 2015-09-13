@@ -76,7 +76,7 @@ brew cask install viscosity
 brew cask install alfred
 brew cask install google-drive
 brew cask install skype
-brew cask install utorrent
+brew cask install transmission
 brew cask install firefox-aurora
 brew cask install sublime-text3
 brew cask install keepassx
