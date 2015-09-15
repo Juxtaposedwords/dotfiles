@@ -58,3 +58,8 @@ sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Make sure our screenshots go to some place sane
+mkdir -p $HOME/Documents/Screenshots
+defaults write com.apple.screencapture location ~/Documents/Screenshots
+killall SystemUIServer
