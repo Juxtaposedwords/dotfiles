@@ -57,7 +57,6 @@ brew install gnu-tar --with-default-names
 brew install gnu-which --with-default-names
 brew install grep --with-defualt-names
 brew install gawk
-brew install docker
 brew install tree
 brew install htop
 brew install git
@@ -90,6 +89,10 @@ brew cask install texshop
 brew cask install calibre
 brew cask install silverlight
 
+# Docker...no seriously
+brew cask install vmware
+brew install docker
+brew install docker-machine
 
 
 # Work stuff
@@ -97,6 +100,8 @@ brew install rbenv
 brew install plenv
 brew install pyenv
 brew install net-snmp
+brew cask install apache-directory-studio
+brew cask install wireshark
 
 # Remove outdated versions from the cellar.
 brew cleanup
