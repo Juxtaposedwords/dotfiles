@@ -88,20 +88,26 @@ brew cask install adobe-reader
 brew cask install texshop
 brew cask install calibre
 brew cask install silverlight
+brew cask install vlc
 
 # Docker...no seriously
-brew cask install vmware
+brew cask install vmware-fusion7
 brew install docker
 brew install docker-machine
 
 
 # Work stuff
-brew install rbenv
-brew install plenv
-brew install pyenv
 brew install net-snmp
 brew cask install apache-directory-studio
 brew cask install wireshark
+brew install rbenv
+brew install plenv
+brew install pyenv
+brew update
+brew tap jawshooah/nodenv
+brew install jawshooah/nodenv/nodenv
+brew install --HEAD node-build
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
