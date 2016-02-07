@@ -100,9 +100,6 @@ brew install docker-machine
 brew install net-snmp
 brew cask install apache-directory-studio
 brew cask install wireshark
-brew install rbenv
-brew install plenv
-brew install pyenv
 brew update
 brew tap jawshooah/nodenv
 brew install jawshooah/nodenv/nodenv
