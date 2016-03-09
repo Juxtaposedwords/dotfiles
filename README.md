@@ -1,7 +1,7 @@
 # Introduction
 Herein lies my attempt at customization. Most developers will begin to tinker and customize their bash interaction. I use bash instead of another shell for it's prevalence on linux systems. I encourage others to use more feature-full shells such as Zshell if they're just working on their machine.
 
-As a reminder:
+### Reminder:
 * .bashrc -  is executed for interactive non-login shells
 * .bash_profile - is executed for login shells
 Note: Mac's terminal treats new login shell by default 
@@ -15,6 +15,14 @@ Note: Mac's terminal treats new login shell by default
   * 20 - enviornment tinkering/setting up the package manager and installing packages
   * 30 - configuring UI tools intalled in level 20
 
+###Bashrc.d
+* Contains a collection of bash profile information
+* files in this directory are named in the format: "[level]-desictription].bash"
+  * 00 - directories, applies to all distros
+  * 10 - tinkering(Homebrew or loading custom scripts)  
+  * 50 - programming enviornments based off rbenv
+  * 80 - bash aliases
+  * 99 - a catch-all, has to go last situation
 
 # Installation
 ```bash
