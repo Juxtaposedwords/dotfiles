@@ -24,6 +24,19 @@ Note: Mac's terminal treats new login shell by default
   * 80 - bash aliases
   * 99 - a catch-all, has to go last situation
 
+
+# Understanding what happens
+## In Mac
+1. We open up a mac Terminal window
+2. Bash loads the bash_profile to find any custom stuff for the present user
+   1. Bash sees the following command: if there is a ~/.bashrc file, source(load) it
+```
+if [ -f $HOME/.bashrc ]; then
+  source $HOME/.bashrc
+fi
+```
+   2.
+
 # Installation
 ```bash
 bash <( curl -fsSL  https://raw.githubusercontent.com/Juxtaposedwords/dotfiles/master/remote-setup.sh)
