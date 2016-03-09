@@ -1,4 +1,4 @@
-### Introduction
+# Introduction
 Herein lies my attempt at customization. Most developers will begin to tinker and customize their bash interaction. I use bash instead of another shell for it's prevalence on linux systems. I encourage others to use more feature-full shells such as Zshell if they're just working on their machine.
 
 As a reminder:
@@ -6,13 +6,17 @@ As a reminder:
 * .bash_profile - is executed for login shells
 Note: Mac's terminal treats new login shell by default 
 
-#Install.d
-* Description - Inside the install.d directory we see a collection of shell scripts which wil be run on installation. These include a number of mac configuration settings, to even just making a directory structure I prefer. 
-* Shell script names follow the format "[level]-[distro]-[desictription].sh"
+###Install.d
+* Contains a number of shell scripts run by "install.sh"
+* Shell script names follow the format: "[level]-[distro]-[desictription].sh"
+* The levels, for this directory loosely correspond to:
+⋅⋅* 00 - directories, applies to all distros
+⋅⋅* 10 - system configurations, mainly for the Mac at this point
+⋅⋅* 20 - enviornment tinkering/setting up the package manager and installing packages
+⋅⋅* 30 - configuring UI tools intalled in level 20
 
 
-
-### Installation
+# Installation
 ```bash
 bash <( curl -fsSL  https://raw.githubusercontent.com/Juxtaposedwords/dotfiles/master/remote-setup.sh)
 ```
