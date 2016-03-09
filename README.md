@@ -10,10 +10,10 @@ Note: Mac's terminal treats new login shell by default
 * Contains a number of shell scripts run by "install.sh"
 * Shell script names follow the format: "[level]-[distro]-[desictription].sh"
 * The levels, for this directory loosely correspond to:
-⋅⋅* 00 - directories, applies to all distros
-⋅⋅* 10 - system configurations, mainly for the Mac at this point
-⋅⋅* 20 - enviornment tinkering/setting up the package manager and installing packages
-⋅⋅* 30 - configuring UI tools intalled in level 20
+  * 00 - directories, applies to all distros
+  * 10 - system configurations, mainly for the Mac at this point
+  * 20 - enviornment tinkering/setting up the package manager and installing packages
+  * 30 - configuring UI tools intalled in level 20
 
 
 # Installation
